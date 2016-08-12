@@ -1,3 +1,58 @@
 h1 {
   text-align: center;
 }
+
+#content {
+  display: none;
+}
+
+#result {
+  display: none;
+  text-align: center;
+  border: 1px solid black;
+  width: 10em;
+  background-color: black;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+}
+
+.background-image1 {
+  background-image: url(http://mysandboxonline.dia-box.ru/wp-content/uploads/2016/03/ruby_and_rails.jpg);
+}
+
+.text-color1 {
+  color: crimson;
+}
+
+.background-image2 {
+  background-image: url(http://erminesoft.com/wp-content/uploads/2016/01/Drupal-vs-Custom-PHP-for-Social-Network-823x400.png);
+}
+
+.text-color2 {
+  color: blue;
+}
+
+.background-image3 {
+  background-image: url(https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/d8/b19930ba3c11e5adfb350b9807f4d8/android_java-2.jpg);
+}
+
+.text-color3 {
+  color: olive;
+}
+
+.background-image4 {
+  background-image: url(https://snow.dog/wp-content/uploads/2012/12/css-design-awards.png);
+}
+
+.text-color4 {
+  color: purple;
+}
+
+.background-image5 {
+  background-image: url(http://www.domaxy.com/img/new-banner/hire-c-net.jpg);
+}
+
+.text-color5 {
+  color: skyblue;
+}

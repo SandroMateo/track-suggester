@@ -1,16 +1,20 @@
+var rails = 0;
+var drupal = 0;
+var android = 0;
+var design = 0;
+var net = 0;
+var age;
+var name;
 $(function() {
-  $("form").submit(function(event) {
+  $("form#start").submit(function(event) {
     event.preventDefault();
-    var rails = 0;
-    var drupal = 0;
-    var android = 0;
-    var design = 0;
-    var net = 0; 
     var age = parseInt($("#age").val());
     var subject = parseInt($("input:radio[name=subject]:checked").val());
     var pastime = parseInt($("input:radio[name=pastime]:checked").val());
     var place = parseInt($("input:radio[name=place]:checked").val());
     var animal = parseInt($("input:radio[name=animal]:checked").val());
+    name = $("input#name").val();
+    age = parseInt($("#age").val());
     if (age < 18) {
       rails = 1;
     } else if (age >= 18 && age < 21) {
@@ -22,6 +26,16 @@ $(function() {
     } else {
         net = 1;
     }
+    $("span.name").text(name);
+    $("button#switch").slideUp("fast");
+    $("#content").fadeIn(1500);
+  });
+  $("form#content").submit(function(event) {
+    event.preventDefault();
+    var subject = parseInt($("input:radio[name=subject]:checked").val());
+    var pastime = parseInt($("input:radio[name=pastime]:checked").val());
+    var place = parseInt($("input:radio[name=place]:checked").val());
+    var animal = parseInt($("input:radio[name=animal]:checked").val());
     if(subject === 1) {
       rails += 1;
       drupal += 1;
@@ -86,15 +100,30 @@ $(function() {
         android += 1;
     }
     if (rails > drupal && rails > android && rails > design && rails > net) {
-      $("#result").text("Ruby/Rails!");
+      $("#survey").slideUp("milliseconds");
+      $("body").addClass("background-image1").fadeIn(3000);
+      $("#result").addClass("text-color1");
+      $("h2#result").text("You Got: Ruby/Rails!").fadeIn(1500);
     } else if (drupal > rails && drupal > android && rails > design && rails > net) {
-        $("#result").text("PHP/Drupal!");
+        $("#survey").slideUp("milliseconds");
+        $("body").addClass("background-image2").fadeIn(3000);
+        $("#result").addClass("text-color2");
+        $("#result").text("You Got: PHP/Drupal!").fadeIn(1500);
     } else if (android > rails && android > drupal && android > design && android > net) {
-        $("#result").text("Java/Android");
+        $("#survey").slideUp("milliseconds");
+        $("body").addClass("background-image3").fadeIn(3000);
+        $("#result").addClass("text-color3");
+        $("#result").text("You Got: Java/Android!").fadeIn(1500);
     } else if (design > rails && design > drupal && design > android && design > net) {
-        $("#result").text("CSS/Design!");
+        $("#survey").slideUp("milliseconds");
+        $("body").addClass("background-image4").fadeIn(3000);
+        $("#result").addClass("text-color4");
+        $("#result").text("You Got: CSS/Design!").fadeIn(1500);
     } else {
-        $("#result").text("C#/.NET!");
+        $("#survey").slideUp("milliseconds");
+        $("body").addClass("background-image5").fadeIn(3000);
+        $("#result").addClass("text-color5");
+        $("#result").text("You Got: C#/.NET!").fadeIn(1500);
     }
   });
 });
