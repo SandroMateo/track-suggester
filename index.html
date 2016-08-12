@@ -11,7 +11,7 @@
     <div class="container">
       <h1>Which Track Should I Take?</h1>
       <p>So, you've just started Epicodus, you're excited to learn how to program, and everything is going well. <strong>BUT</strong>, you still are not sure which track to take. Well I've got good news, you've come to the right website. Just fill out the survey below and we'll tell you which track suits you best!</p>
-      <form>
+      <form id="start">
         <h4>Please enter your first name and age:</h4>
         <div class="form-group">
           <div class="row">
@@ -23,7 +23,10 @@
             </div>
           </div>
         </div>
-        <h4>What is your favorite subject to learn in school?</h4>
+        <button type="submit" id="switch" class="btn btn-success">Enter!</button>
+      </form>
+      <form id="content">
+        <h4><span class="name"></span>, what is your favorite subject to learn in school?</h4>
         <div class="radio">
           <label>
             <input type="radio" value="1" class="subject" name="subject">
@@ -48,7 +51,7 @@
             Business
           </label>
         </div>
-        <h4>What is your favorite past-time?</h4>
+        <h4><span class="name"></span>, what is your favorite past-time?</h4>
         <div class="radio">
           <label>
             <input type="radio" value="1" class="pastime" name="pastime">
@@ -73,7 +76,7 @@
             Working on perfecting my code!
           </label>
         </div>
-        <h4>If you could travel to one of these places, which would you choose?</h4>
+        <h4><span class="name"></span>, if you could travel to one of these places, which would you choose?</h4>
         <div class="radio">
           <label>
             <input type="radio" value="1" class="place" name="place">
@@ -98,7 +101,7 @@
             Virtual Reality
           </label>
         </div>
-        <h4>If you had to adopt one of these pets for the rest of your life, what would it be?</h4>
+        <h4><span class="name"></span>, if you had to adopt one of these pets for the rest of your life, what would it be?</h4>
         <div class="radio">
           <label>
             <input type="radio" value="1" class="animal" name="animal">

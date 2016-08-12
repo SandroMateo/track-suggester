@@ -1,16 +1,16 @@
+var rails = 0;
+var drupal = 0;
+var android = 0;
+var design = 0;
+var net = 0;
+var age;
+var name;
 $(function() {
-  $("form").submit(function(event) {
+  $("form#start").submit(function(event) {
     event.preventDefault();
-    var rails = 0;
-    var drupal = 0;
-    var android = 0;
-    var design = 0;
-    var net = 0; 
-    var age = parseInt($("#age").val());
-    var subject = parseInt($("input:radio[name=subject]:checked").val());
-    var pastime = parseInt($("input:radio[name=pastime]:checked").val());
-    var place = parseInt($("input:radio[name=place]:checked").val());
-    var animal = parseInt($("input:radio[name=animal]:checked").val());
+    name = $("input#name").val();
+    alert(name);
+    age = parseInt($("#age").val());
     if (age < 18) {
       rails = 1;
     } else if (age >= 18 && age < 21) {
@@ -22,6 +22,15 @@ $(function() {
     } else {
         net = 1;
     }
+    $("span.name").text(name);
+    $("#content").show();
+  });
+  $("form#content").submit(function(event) {
+    event.preventDefault();
+    var subject = parseInt($("input:radio[name=subject]:checked").val());
+    var pastime = parseInt($("input:radio[name=pastime]:checked").val());
+    var place = parseInt($("input:radio[name=place]:checked").val());
+    var animal = parseInt($("input:radio[name=animal]:checked").val());
     if(subject === 1) {
       rails += 1;
       drupal += 1;
