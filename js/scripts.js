@@ -101,29 +101,29 @@ $(function() {
     }
     if (rails > drupal && rails > android && rails > design && rails > net) {
       $("#survey").slideUp("milliseconds");
-      $("body").addClass("background-image1").fadeIn(3000);
+      $("body").addClass("background-image1");
       $("#result").addClass("text-color1");
-      $("h2#result").text("You Got: Ruby/Rails!").fadeIn(1500);
+      $("h2#result").text(name + ", you got: Ruby/Rails!").fadeIn(1500);
     } else if (drupal > rails && drupal > android && rails > design && rails > net) {
         $("#survey").slideUp("milliseconds");
-        $("body").addClass("background-image2").fadeIn(3000);
+        $("body").addClass("background-image2");
         $("#result").addClass("text-color2");
-        $("#result").text("You Got: PHP/Drupal!").fadeIn(1500);
+        $("#result").text(name + ", you got: PHP/Drupal!").fadeIn(1500);
     } else if (android > rails && android > drupal && android > design && android > net) {
         $("#survey").slideUp("milliseconds");
-        $("body").addClass("background-image3").fadeIn(3000);
+        $("body").addClass("background-image3");
         $("#result").addClass("text-color3");
-        $("#result").text("You Got: Java/Android!").fadeIn(1500);
+        $("#result").text(name + ", you got: Java/Android!").fadeIn(1500);
     } else if (design > rails && design > drupal && design > android && design > net) {
         $("#survey").slideUp("milliseconds");
-        $("body").addClass("background-image4").fadeIn(3000);
+        $("body").addClass("background-image4");
         $("#result").addClass("text-color4");
-        $("#result").text("You Got: CSS/Design!").fadeIn(1500);
+        $("#result").text(name + ", you got: CSS/Design!").fadeIn(1500);
     } else {
         $("#survey").slideUp("milliseconds");
-        $("body").addClass("background-image5").fadeIn(3000);
+        $("body").addClass("background-image5");
         $("#result").addClass("text-color5");
-        $("#result").text("You Got: C#/.NET!").fadeIn(1500);
+        $("#result").text(name + ", you got: C#/.NET!").fadeIn(1500);
     }
   });
 });
