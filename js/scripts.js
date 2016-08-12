@@ -26,7 +26,7 @@ $(function() {
     } else {
         net = 1;
     }
-    $("span.name").text(name);
+    $("span.name").text(name + ", ");
     $("button#switch").slideUp("fast");
     $("#content").fadeIn(1500);
   });
