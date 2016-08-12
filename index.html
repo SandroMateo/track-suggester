@@ -9,126 +9,130 @@
   </head>
   <body>
     <div class="container">
-      <h1>Which Track Should I Take?</h1>
-      <p>So, you've just started Epicodus, you're excited to learn how to program, and everything is going well. <strong>BUT</strong>, you still are not sure which track to take. Well I've got good news, you've come to the right website. Just fill out the survey below and we'll tell you which track suits you best!</p>
-      <form id="start">
-        <h4>Please enter your first name and age:</h4>
-        <div class="form-group">
-          <div class="row">
-            <div class="col-sm-3">
-              <input type="text" class="form-control" placeholder="Enter Name" id="name">
+      <div class="survey">
+        <h1>Which Track Should I Take?</h1>
+        <div id="survey">
+          <p>So, you've just started Epicodus, you're excited to learn how to program, and everything is going well. <strong>BUT</strong>, you still are not sure which track to take. Well I've got good news, you've come to the right website. Just fill out the survey below and we'll tell you which track suits you best!</p>
+          <form id="start">
+            <h4>Please enter your first name and age:</h4>
+            <div class="form-group">
+              <div class="row">
+                <div class="col-sm-3">
+                  <input type="text" class="form-control" placeholder="Enter Name" id="name">
+                </div>
+                <div class="col-sm-3">
+                  <input type="number" class="form-control" placeholder="Enter Age" id="age">
+                </div>
+              </div>
             </div>
-            <div class="col-sm-3">
-              <input type="number" class="form-control" placeholder="Enter Age" id="age">
+            <button type="submit" id="switch" class="btn btn-success">Enter!</button>
+          </form>
+          <form id="content">
+            <h4><span class="name"></span>, what is your favorite subject to learn in school?</h4>
+            <div class="radio">
+              <label>
+                <input type="radio" value="1" class="subject" name="subject">
+                Math and Science
+              </label>
             </div>
-          </div>
+            <div class="radio">
+              <label>
+                <input type="radio" value="2" class="subject" name="subject">
+                Writing
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" value="3" class="subject" name="subject">
+                Arts
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" value="4" class="subject" name="subject">
+                Business
+              </label>
+            </div>
+            <h4><span class="name"></span>, what is your favorite past-time?</h4>
+            <div class="radio">
+              <label>
+                <input type="radio" value="1" class="pastime" name="pastime">
+                Reading
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" value="2" class="pastime" name="pastime">
+                Exercising
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" value="3" class="pastime" name="pastime">
+                Socializing
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" value="4" class="pastime" name="pastime">
+                Working on perfecting my code!
+              </label>
+            </div>
+            <h4><span class="name"></span>, if you could travel to one of these places, which would you choose?</h4>
+            <div class="radio">
+              <label>
+                <input type="radio" value="1" class="place" name="place">
+                A nice sunny beach
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" value="2" class="place" name="place">
+                Trantor
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" value="3" class="place" name="place">
+                Middle-Earth
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" value="4" class="place" name="place">
+                Virtual Reality
+              </label>
+            </div>
+            <h4><span class="name"></span>, if you had to adopt one of these pets for the rest of your life, what would it be?</h4>
+            <div class="radio">
+              <label>
+                <input type="radio" value="1" class="animal" name="animal">
+                A dog
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" value="2" class="animal" name="animal">
+                A cat
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" value="3" class="animal" name="animal">
+                A billy-bumbler
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" value="4" class="animal" name="animal">
+                A robot
+              </label>
+            </div>
+            <button type="submit" class="btn btn-warning">Calculate!</button>
+          </form>
         </div>
-        <button type="submit" id="switch" class="btn btn-success">Enter!</button>
-      </form>
-      <form id="content">
-        <h4><span class="name"></span>, what is your favorite subject to learn in school?</h4>
-        <div class="radio">
-          <label>
-            <input type="radio" value="1" class="subject" name="subject">
-            Math and Science
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" value="2" class="subject" name="subject">
-            Writing
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" value="3" class="subject" name="subject">
-            Arts
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" value="4" class="subject" name="subject">
-            Business
-          </label>
-        </div>
-        <h4><span class="name"></span>, what is your favorite past-time?</h4>
-        <div class="radio">
-          <label>
-            <input type="radio" value="1" class="pastime" name="pastime">
-            Reading
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" value="2" class="pastime" name="pastime">
-            Exercising
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" value="3" class="pastime" name="pastime">
-            Socializing
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" value="4" class="pastime" name="pastime">
-            Working on perfecting my code!
-          </label>
-        </div>
-        <h4><span class="name"></span>, if you could travel to one of these places, which would you choose?</h4>
-        <div class="radio">
-          <label>
-            <input type="radio" value="1" class="place" name="place">
-            A nice sunny beach
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" value="2" class="place" name="place">
-            Trantor
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" value="3" class="place" name="place">
-            Middle-Earth
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" value="4" class="place" name="place">
-            Virtual Reality
-          </label>
-        </div>
-        <h4><span class="name"></span>, if you had to adopt one of these pets for the rest of your life, what would it be?</h4>
-        <div class="radio">
-          <label>
-            <input type="radio" value="1" class="animal" name="animal">
-            A dog
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" value="2" class="animal" name="animal">
-            A cat
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" value="3" class="animal" name="animal">
-            A billy-bumbler
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" value="4" class="animal" name="animal">
-            A robot
-          </label>
-        </div>
-        <button type="submit" class="btn btn-warning">Calculate!</button>
-      </form>
-      <h3 id="result"></h3>
+      </div>
+      <h2 id="result"></h2>
     </div>
   </body>
 </html>
