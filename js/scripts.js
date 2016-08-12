@@ -1,31 +1,42 @@
 $(function() {
   $("form").submit(function(event) {
     event.preventDefault();
-    var rails; /*writing or arts or math*/
-    var drupal; /*writing or business or math*/
-    var android; /*math or arts*/
-    var design; /*arts or math*/
-    var net; /*business or math*/
+    var rails = 0; /*writing or arts or math*/
+    var drupal = 0; /*writing or business or math*/
+    var android = 0; /*math or arts*/
+    var design = 0; /*arts or math*/
+    var net = 0; /*business or math*/
     var age = parseInt($("#age").val());
     var subject = parseInt($("input:radio[name=subject]:checked").val());
     var pastime = parseInt($("input:radio[name=pastime]:checked").val());
     var place = parseInt($("input:radio[name=place]:checked").val());
     var animal = parseInt($("input:radio[name=animal]:checked").val());
-    if(subject === 1) {
+    if (age < 18) {
       rails = 1;
-      drupal = 1;
-      android = 1;
-      design = 1;
-      net = 1;
+    } else if (age >= 18 && age < 21) {
+        drupal = 1;
+    } else if (age >= 21 && age < 26) {
+        android = 1;
+    } else if (age >= 26 && age < 31) {
+        design = 1;
+    } else {
+        net = 1;
+    }
+    if(subject === 1) {
+      rails += 1;
+      drupal += 1;
+      android += 1;
+      design += 1;
+      net += 1;
     } else if (subject === 2) {
-        rails = 1;
+        rails += 1;
         drupal = 1;
     } else if (subject === 3) {
-      android = 1;
-      design = 1;
+      android += 1;
+      design += 1;
     } else {
-      drupal = 1;
-      net = 1;
+      drupal += 1;
+      net += 1;
     }
     if (pastime === 1) {
       rails += 1;
@@ -67,6 +78,7 @@ $(function() {
     } else if (animal === 2) {
         rails += 1;
         drupal +=1;
+        design += 1;
     } else if (animal === 3) {
         drupal += 1;
         net += 1;
@@ -84,6 +96,5 @@ $(function() {
     } else {
         $("#result").text("C#/.NET!");
     }
-
   });
 });
