@@ -1,11 +1,11 @@
 $(function() {
   $("form").submit(function(event) {
     event.preventDefault();
-    var rails = 0; /*writing or arts or math*/
-    var drupal = 0; /*writing or business or math*/
-    var android = 0; /*math or arts*/
-    var design = 0; /*arts or math*/
-    var net = 0; /*business or math*/
+    var rails = 0;
+    var drupal = 0;
+    var android = 0;
+    var design = 0;
+    var net = 0; 
     var age = parseInt($("#age").val());
     var subject = parseInt($("input:radio[name=subject]:checked").val());
     var pastime = parseInt($("input:radio[name=pastime]:checked").val());
